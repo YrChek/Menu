@@ -7,14 +7,19 @@ function start(el) {
             if (neighbour) {
                 if (ram) {
                     ram.classList.remove('menu_active');
+                };
+                if (ram != neighbour) {
+                    neighbour.classList.add('menu_active');
+                    ram = neighbour;
+                } else {
+                    ram.classList.remove('menu_active');
+                    ram = '';
                 }
-                neighbour.classList.add('menu_active');
-                ram = neighbour;
                 return false
             } else {
                 if (ram) {
                     ram.classList.remove('menu_active');
-                }
+                };
             }
         }
     })
